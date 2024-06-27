@@ -15,10 +15,7 @@ def process_json_files(directory):
                     data = json.load(f)
                     if "SWCs" in data:
                         for swc in data["SWCs"]:
-                            if (
-                                swc.get("category")
-                                == "SWC-128-DoS With Block Gas Limit"
-                            ):
+                            if swc.get("category") == "SWC-107-Reentrancy":
                                 print(swc)
                                 results.append(
                                     [
